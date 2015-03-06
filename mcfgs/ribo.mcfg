@@ -1,0 +1,34 @@
+
+<end_criteria>
+	time limit : 0.005
+
+<capture_criteria>
+  increment : 0.00005 : time
+
+
+
+
+
+
+
+
+<plot_targets>
+	time
+
+<post_processes>
+#	means : meanfields : 0 : ES_Complex, Product, Substrate, Enzyme of time : 20 : ordered
+
+<multiprocessing>
+	workers : 8
+
+<output_plans>
+	0 : - : ensemble_output : plt : all
+
+<ensemble>
+	multiprocessing : on
+	mapparameterspace : off
+	fitting : off
+	postprocessing : on
+	trajectory_count : 10
+
+
