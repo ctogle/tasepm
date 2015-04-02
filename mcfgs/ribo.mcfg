@@ -1,34 +1,33 @@
 
 <end_criteria>
-	time limit : 0.005
+	time limit : 1000.0
 
 <capture_criteria>
-  increment : 0.00005 : time
+  increment : 1.0 : time
 
-
-
-
-
-
-
+### other stuff will go here
 
 <plot_targets>
 	time
 
-<post_processes>
-#	means : meanfields : 0 : ES_Complex, Product, Substrate, Enzyme of time : 20 : ordered
+  initflux
+  gateflux
+  termflux
 
-<multiprocessing>
-	workers : 8
+  stalled
+
+<post_processes>
+	means : meanfields : 0 : initflux,gateflux,termflux,stalled of time : 100 : ordered
 
 <output_plans>
 	0 : - : ensemble_output : plt : all
+	1 : - : means_output : plt : all
 
 <ensemble>
-	multiprocessing : on
+	multiprocessing : off
 	mapparameterspace : off
 	fitting : off
 	postprocessing : on
-	trajectory_count : 10
+	trajectory_count : 100
 
 
