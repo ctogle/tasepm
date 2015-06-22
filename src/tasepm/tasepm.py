@@ -3,7 +3,7 @@ import modular_core.fundamental as lfu
 import modular_core.modules.simulationmodule as smd
 import modular_core.parameterspace.parameterspaces as lpsp
 import modular_core.cython.writer as cwr
-import modular_core.io.liboutput as lo
+import modular_core.io.output as lo
 
 # imports from standard python libraries
 import pdb,os,sys,time,numpy,random
